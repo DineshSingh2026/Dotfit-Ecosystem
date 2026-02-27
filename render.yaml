@@ -1,0 +1,8 @@
+# Render Blueprint — deploy as Static Site (not Docker Web Service)
+# https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: dotfit-ecosystem
+    runtime: static
+    buildCommand: "echo 'No build step'"
+    staticPublishPath: .

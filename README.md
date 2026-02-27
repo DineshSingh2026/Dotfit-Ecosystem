@@ -17,3 +17,15 @@ Static, view-only landing page for the FIT ecosystem (BodyBank, FitChef, Beyond 
 ## Deploy
 
 Upload the project folder to any static host (GitHub Pages, Netlify, Vercel, etc.) or point the host’s root to this directory.
+
+### Deploy on Render
+
+This repo must be deployed as a **Static Site**, not a Web Service or Docker app (there is no Dockerfile).
+
+1. In [Render Dashboard](https://dashboard.render.com), click **New +** → **Static Site**.
+2. Connect the repo: `DineshSingh2026/Dotfit-Ecosystem`, branch `master`.
+3. **Build command:** `echo 'No build step'` (or leave empty).
+4. **Publish directory:** `.` (repo root).
+5. Click **Create Static Site**.
+
+If you previously created a **Web Service** (Docker) by mistake, delete it and create a **Static Site** as above. The repo includes a `render.yaml` blueprint so Render can use these settings when you connect the repo via **Blueprint** (New + → Blueprint).
