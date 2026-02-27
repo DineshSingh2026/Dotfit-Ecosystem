@@ -41,14 +41,11 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   max-width: 100vw;
-  cursor: none;
+  cursor: auto;
 }
 
 /* ─── CURSOR ─── */
-#cur { position:fixed;width:8px;height:8px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s; }
-#cur-trail { position:fixed;width:36px;height:36px;border:1px solid var(--gold);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .12s ease,top .12s ease,width .3s,height .3s,border-color .3s;opacity:.6; }
-body:has(a:hover) #cur, body:has(button:hover) #cur { width:16px;height:16px;background:var(--ink); }
-body:has(a:hover) #cur-trail, body:has(button:hover) #cur-trail { width:60px;height:60px;border-color:var(--ink);opacity:.4; }
+#cur, #cur-trail { display: none !important; }
 
 /* ─── CANVAS ─── */
 #particle-canvas { position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.35; }
